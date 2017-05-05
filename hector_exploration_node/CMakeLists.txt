@@ -6,7 +6,6 @@ project(hector_exploration_node)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   hector_exploration_planner
-  hector_exploration_base_global_planner_plugin
   hector_nav_msgs
 )
 
@@ -137,7 +136,7 @@ target_link_libraries(exploration_planner_node
 # )
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
+# install(DIRECTORY include/hector_exploration_node/
 #   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 #   FILES_MATCHING PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
@@ -155,9 +154,9 @@ target_link_libraries(exploration_planner_node
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_hector_exploration_node.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+# catkin_add_gtest(hector_exploration_node-test test/test_hector_exploration_node.cpp)
+# if(TARGET hector_exploration_node-test)
+#   target_link_libraries(hector_exploration_node-test hector_exploration_node)
 # endif()
 
 ## Add folders to be run by python nosetests
