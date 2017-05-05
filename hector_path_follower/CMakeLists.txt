@@ -81,7 +81,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES ${PROJECT_NAME}
+  LIBRARIES hector_path_follower
   CATKIN_DEPENDS nav_msgs roscpp tf
 #  DEPENDS system_lib
 )
@@ -102,7 +102,7 @@ include_directories(
 # add_library(hector_path_follower
 #   src/${PROJECT_NAME}/hector_path_follower.cpp
 # )
-add_library(${PROJECT_NAME} src/hector_path_follower.cpp)
+add_library(hector_path_follower src/hector_path_follower.cpp)
 #add_library(hector_path_follower_lib src/hector_path_follower.cpp)
 
 ## Declare a cpp executable
@@ -133,11 +133,11 @@ target_link_libraries(hector_path_follower_node
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS hector_path_follower hector_path_follower_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+ install(TARGETS hector_path_follower hector_path_follower_node
+   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
