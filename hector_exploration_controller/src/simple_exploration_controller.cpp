@@ -28,7 +28,7 @@
 
 
 #include <ros/ros.h>
-#include <hector_path_follower/hector_path_follower.h>
+#include <hector_path_follower.h>
 #include <hector_nav_msgs/GetRobotTrajectory.h>
 
 class SimpleExplorationController
