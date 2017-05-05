@@ -98,6 +98,9 @@ CATKIN_DEPENDS roscpp rospy std_msgs hector_path_follower hector_nav_msgs
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+MESSAGE( STATUS "CMAKE_SOURCE_DIR:         " ${CMAKE_SOURCE_DIR} )
+MESSAGE( STATUS "catkin_INCLUDE_DIRS:         " ${catkin_INCLUDE_DIRS} )
+
 
 ## Declare a cpp library
 # add_library(hector_exploration_controller
