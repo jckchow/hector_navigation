@@ -155,10 +155,10 @@ target_link_libraries(hector_exploration_base_global_planner_plugin hector_explo
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS hector_exploration_base_global_planner_plugin hector_exploration_planner
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+install(TARGETS hector_exploration_base_global_planner_plugin hector_exploration_planner
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
 ## Mark cpp header files for installation
