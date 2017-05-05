@@ -84,7 +84,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES hector_exploration_controller
-CATKIN_DEPENDS roscpp rospy std_msgs hector_path_follower hector_nav_msgs
+#  CATKIN_DEPENDS roscpp rospy std_msgs hector_path_follower hector_nav_msgs
 #  DEPENDS system_lib
 )
 
