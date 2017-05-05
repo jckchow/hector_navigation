@@ -79,9 +79,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-INCLUDE_DIRS include
-LIBRARIES hector_exploration_node
-CATKIN_DEPENDS hector_exploration_planner hector_nav_msgs
+#INCLUDE_DIRS include
+#LIBRARIES hector_exploration_node
+#CATKIN_DEPENDS hector_exploration_planner hector_nav_msgs
 #  DEPENDS system_lib
 )
 
@@ -94,6 +94,7 @@ CATKIN_DEPENDS hector_exploration_planner hector_nav_msgs
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${CMAKE_SOURCE_DIR}/include/
 )
 
 ## Declare a cpp library
