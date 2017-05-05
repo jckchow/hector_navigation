@@ -97,7 +97,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
-  ${CMAKE_SOURCE_DIR}/include/hector_path_follower.h
+  ${CMAKE_SOURCE_DIR}/include/hector_path_follower/hector_path_follower.h
 )
 MESSAGE( STATUS "CMAKE_SOURCE_DIR:         " ${CMAKE_SOURCE_DIR} )
 MESSAGE( STATUS "catkin_INCLUDE_DIRS:         " ${catkin_INCLUDE_DIRS} )
