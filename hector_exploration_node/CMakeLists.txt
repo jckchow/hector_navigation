@@ -6,6 +6,7 @@ project(hector_exploration_node)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   hector_exploration_planner
+  hector_exploration_base_global_planner_plugin
   hector_nav_msgs
 )
 
