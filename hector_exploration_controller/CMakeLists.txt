@@ -84,7 +84,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES hector_exploration_controller
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+CATKIN_DEPENDS roscpp rospy std_msgs hector_path_follower hector_nav_msgs
 #  DEPENDS system_lib
 )
 
@@ -109,8 +109,8 @@ add_executable(simple_exploration_controller src/simple_exploration_controller.c
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-add_dependencies(hector_exploration_controller_node hector_exploration_controller_generate_messages_cpp)
-add_dependencies(simple_exploration_controller ${catkin_EXPORTED_TARGETS})
+#add_dependencies(hector_exploration_controller_node hector_exploration_controller_generate_messages_cpp)
+#add_dependencies(simple_exploration_controller ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(simple_exploration_controller
@@ -132,11 +132,11 @@ target_link_libraries(simple_exploration_controller
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS hector_exploration_controller hector_exploration_controller_node
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#install(TARGETS hector_exploration_controller hector_exploration_controller_node
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
