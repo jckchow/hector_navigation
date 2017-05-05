@@ -95,7 +95,7 @@ generate_dynamic_reconfigure_options(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES hector_exploration_base_global_planner_plugin ${PROJECT_NAME}
+  LIBRARIES hector_exploration_base_global_planner_plugin hector_exploration_planner
   CATKIN_DEPENDS costmap_2d dynamic_reconfigure geometry_msgs hector_nav_msgs nav_core nav_msgs pluginlib rosconsole roscpp rospy
 #  DEPENDS system_lib
 )
@@ -116,7 +116,7 @@ include_directories(
 # add_library(hector_exploration_planner
 #   src/${PROJECT_NAME}/hector_exploration_planner.cpp
 # )
-add_library(${PROJECT_NAME} src/hector_exploration_planner.cpp)
+add_library(hector_exploration_planner src/hector_exploration_planner.cpp)
 add_library(hector_exploration_base_global_planner_plugin src/hector_exploration_base_global_planner_plugin.cpp)
 
 ## Declare a cpp executable
@@ -125,15 +125,15 @@ add_library(hector_exploration_base_global_planner_plugin src/hector_exploration
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(hector_exploration_planner_node hector_exploration_planner_generate_messages_cpp)
-add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_gencfg)
-add_dependencies(hector_exploration_base_global_planner_plugin ${PROJECT_NAME}_gencfg)
+add_dependencies(hector_exploration_planner hector_exploration_planner_gencfg)
+add_dependencies(hector_exploration_base_global_planner_plugin hector_exploration_planner_gencfg)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(hector_exploration_planner_node
 #   ${catkin_LIBRARIES}
 # )
 
-target_link_libraries(hector_exploration_base_global_planner_plugin ${PROJECT_NAME})
+target_link_libraries(hector_exploration_base_global_planner_plugin hector_exploration_planner)
 
 #############
 ## Install ##
@@ -150,14 +150,14 @@ target_link_libraries(hector_exploration_base_global_planner_plugin ${PROJECT_NA
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS hector_exploration_base_global_planner_plugin ${PROJECT_NAME}
+# install(TARGETS hector_exploration_base_global_planner_plugin hector_exploration_planner
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
+# install(DIRECTORY include/hector_exploration_planner/
 #   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 #   FILES_MATCHING PATTERN "*.h"
 #   PATTERN ".svn" EXCLUDE
@@ -175,9 +175,9 @@ target_link_libraries(hector_exploration_base_global_planner_plugin ${PROJECT_NA
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_hector_exploration_planner.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+# catkin_add_gtest(hector_exploration_planner-test test/test_hector_exploration_planner.cpp)
+# if(TARGET hector_exploration_planner-test)
+#   target_link_libraries(hector_exploration_planner-test hector_exploration_planner)
 # endif()
 
 ## Add folders to be run by python nosetests
