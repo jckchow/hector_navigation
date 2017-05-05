@@ -116,8 +116,13 @@ include_directories(
 # add_library(hector_exploration_planner
 #   src/${PROJECT_NAME}/hector_exploration_planner.cpp
 # )
+#add_library(hector_exploration_planner src/hector_exploration_planner.cpp)
+#add_library(hector_exploration_base_global_planner_plugin src/hector_exploration_base_global_planner_plugin.cpp)
+
 add_library(hector_exploration_planner src/hector_exploration_planner.cpp)
+target_link_libraries(hector_exploration_planner ${catkin_LIBRARIES})
 add_library(hector_exploration_base_global_planner_plugin src/hector_exploration_base_global_planner_plugin.cpp)
+target_link_libraries(hector_exploration_base_global_planner_plugin ${catkin_LIBRARIES})
 
 ## Declare a cpp executable
 # add_executable(hector_exploration_planner_node src/hector_exploration_planner_node.cpp)
