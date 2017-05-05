@@ -109,7 +109,8 @@ add_executable(simple_exploration_controller src/simple_exploration_controller.c
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(hector_exploration_controller_node hector_exploration_controller_generate_messages_cpp)
+add_dependencies(hector_exploration_controller_node hector_exploration_controller_generate_messages_cpp)
+add_dependencies(simple_exploration_controller ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(simple_exploration_controller
