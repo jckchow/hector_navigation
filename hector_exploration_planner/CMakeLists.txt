@@ -159,7 +159,7 @@ install(TARGETS hector_exploration_base_global_planner_plugin hector_exploration
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/hector_exploration_planner/
