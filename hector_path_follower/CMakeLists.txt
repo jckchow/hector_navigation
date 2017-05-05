@@ -103,7 +103,7 @@ include_directories(
 #   src/${PROJECT_NAME}/hector_path_follower.cpp
 # )
 add_library(${PROJECT_NAME} src/hector_path_follower.cpp)
-add_library(hector_path_follower_lib src/hector_path_follower.cpp)
+#add_library(hector_path_follower_lib src/hector_path_follower.cpp)
 
 ## Declare a cpp executable
 # add_executable(hector_path_follower_node src/hector_path_follower_node.cpp)
@@ -133,11 +133,11 @@ target_link_libraries(hector_path_follower_node
 # )
 
 ## Mark executables and/or libraries for installation
- install(TARGETS hector_path_follower hector_path_follower_node
-   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
+# install(TARGETS hector_path_follower hector_path_follower_node
+#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
