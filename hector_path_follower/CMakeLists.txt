@@ -81,7 +81,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES ${PROJECT_NAME} hector_path_follower_lib
+  LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS nav_msgs roscpp tf
 #  DEPENDS system_lib
 )
