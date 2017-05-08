@@ -119,7 +119,6 @@ add_library(hector_costmap_node
 
 ## Declare a cpp executable
 add_executable(hector_costmap src/hector_costmap.cpp src/hector_costmap_node.cpp)
-add_executable(hector_costmap_node src/hector_costmap.cpp src/hector_costmap_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
