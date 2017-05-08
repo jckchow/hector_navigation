@@ -113,6 +113,9 @@ include_directories(
 add_library(hector_costmap
    src/${PROJECT_NAME}/hector_costmap.cpp
  )
+add_library(hector_costmap_node
+   src/${PROJECT_NAME}/hector_costmap_node.cpp
+ )
 
 ## Declare a cpp executable
 add_executable(hector_costmap src/hector_costmap.cpp src/hector_costmap_node.cpp)
