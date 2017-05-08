@@ -93,7 +93,7 @@ catkin_package(
  INCLUDE_DIRS include
  LIBRARIES hector_costmap
  CATKIN_DEPENDS cv_bridge dynamic_reconfigure geometry_msgs hector_elevation_msgs hector_map_tools opencv2 pcl_ros sensor_msgs
- DEPENDS system_lib
+ # DEPENDS system_lib
 )
 
 ###########
@@ -110,15 +110,16 @@ include_directories(
 )
 
 ## Declare a cpp library
-add_library(hector_costmap
-   src/${PROJECT_NAME}/hector_costmap.cpp
- )
-add_library(hector_costmap_node
-   src/${PROJECT_NAME}/hector_costmap_node.cpp
- )
+#add_library(hector_costmap
+#  src/${PROJECT_NAME}/hector_costmap.cpp
+# )
+#add_library(hector_costmap_node
+#   src/${PROJECT_NAME}/hector_costmap_node.cpp
+# )
 
 ## Declare a cpp executable
 add_executable(hector_costmap src/hector_costmap.cpp src/hector_costmap_node.cpp)
+add_executable(hector_costmap_node src/hector_costmap.cpp src/hector_costmap_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
