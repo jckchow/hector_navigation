@@ -115,7 +115,8 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-add_executable(hector_costmap src/hector_costmap_node.cpp src/hector_costmap.cpp)
+add_executable(hector_costmap src/hector_costmap.cpp)
+add_executable(hector_costmap_node src/hector_costmap_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -123,6 +124,11 @@ add_dependencies(hector_costmap ${PROJECT_NAME}_gencfg)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(hector_costmap
+   ${catkin_LIBRARIES}
+   ${OpenCV_LIBS}
+)
+
+target_link_libraries(hector_costmap_node
    ${catkin_LIBRARIES}
    ${OpenCV_LIBS}
 )
